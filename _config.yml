@@ -1,0 +1,22 @@
+plugins:
+  - jekyll-remote-theme
+
+remote_theme: jonaharagon/jekyll-bootstrap-theme
+timezone: Pacific/Auckland
+google:
+  analytics: UA-51344487-1
+podcast:
+  title: Dabbling in Dogmas
+  author: Mark Honeychurch
+  owner: Mark Honeychurch
+  email: mark@honeychurch.org
+  url: https://dabblingindogmas.com
+  album_art: /assets/Logo-iTunes.png
+  category: Religion
+  subcategories:
+    - Skepticism
+    - Critical Thinking
+  explicit: false
+  description: A topical skeptical podcast from New Zealand.
+  summary: Skepticism Today is an hour long monthly skeptical podcast created by Dell Mitchell, Mark Honeychurch, Simon McAuliffe and Tim Atkin.
+  subtitle: Skeptical. Critical. Topical.
