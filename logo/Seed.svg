@@ -1,0 +1,16 @@
+<svg viewBox="-50 -100 150 300" xmlns="http://www.w3.org/2000/svg">
+	<style>
+		circle {
+			fill: none;
+			stroke-width: 5px;
+		}
+	</style>
+	<circle cx="0" cy="50" r="100" stroke="#999" />
+	<circle cx="0" cy="50" r="50" stroke="black" />
+	<circle cx="43.3" cy="75" r="50" stroke="purple" />
+	<circle cx="43.3" cy="25" r="50" stroke="blue" />
+	<circle cx="0" cy="0" r="50" stroke="green" />
+	<circle cx="-43.3" cy="25" r="50" stroke="yellow" />
+	<circle cx="-43.3" cy="75" r="50" stroke="orange" />
+	<circle cx="0" cy="100" r="50" stroke="red" />
+</svg>
