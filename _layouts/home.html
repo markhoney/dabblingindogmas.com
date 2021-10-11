@@ -36,7 +36,6 @@ layout: default
 		<h2 class="mt-5 mb-2">Previous Episodes</h2>
 		<div class="container">
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-				{% comment %}{%- assign episodes = site.posts | where_exp:'page.previous', not 'nil' -%}{% endcomment %}
 				{%- for episode in site.posts -%}
 				{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
 					<div class="col card">

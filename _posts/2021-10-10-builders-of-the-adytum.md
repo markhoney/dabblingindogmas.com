@@ -1,7 +1,6 @@
 ---
 episode: "02"
 title: Builders of the Adytum
-date: 2021-10-10
 ---
 
 The Dabblers attend a BOTA service and discuss their response to an eclectic Californian mixture of tarot, kabbalah, alchemy, Jungian archetypes, and more.
