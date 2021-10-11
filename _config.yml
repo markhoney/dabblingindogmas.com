@@ -13,3 +13,4 @@ collections:
   - hosts
 plugins:
   - jekyll-remote-theme
+  - jekyll-sitemap
