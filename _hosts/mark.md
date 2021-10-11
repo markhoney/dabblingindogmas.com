@@ -1,5 +1,6 @@
 ---
 name: Mark Honeychurch
+slug: mark
 email: mark@dabblingindogmas.com
 ---
 

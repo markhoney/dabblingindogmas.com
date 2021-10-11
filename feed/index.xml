@@ -32,7 +32,7 @@ info: https://help.apple.com/itc/podcasts_connect/
 			<description>{{ episode.content | xml_escape | strip_newlines }}</description>
 			<itunes:duration>{{ audio.length | xml_escape }}</itunes:duration>
 			<link>{{ episode.url | absolute_url }}</link>
-			<itunes:image>{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{ episode.episode | prepend: '/assets/img/' | append: '.jpg' | absolute_url }}{% endif %}</itunes:image>
+			<itunes:image>{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}</itunes:image>
 			<itunes:explicit>{% if episode.explicit %}true{% else %}false{% endif %}</itunes:explicit>
 			<itunes:episode>{{ episode.episode }}</itunes:episode>
 			<itunes:episodeType>{% if episode.type %}{{ episode.type }}{% else %}full{% endif %}</itunes:episodeType>

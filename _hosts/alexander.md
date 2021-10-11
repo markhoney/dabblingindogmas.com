@@ -1,5 +1,6 @@
 ---
 name: Alexander Maxwell
+slug: alexander
 email: alexander@dabblingindogmas.com
 ---
 
