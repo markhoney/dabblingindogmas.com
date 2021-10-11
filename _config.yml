@@ -2,6 +2,8 @@ remote_theme: jonaharagon/jekyll-bootstrap-theme
 timezone: Pacific/Auckland
 google:
   analytics: UA-51344487-1
+collections:
+  - hosts
 podcast:
   title: Dabbling in Dogmas
   author: Mark Honeychurch
@@ -10,11 +12,10 @@ podcast:
   email: mark@honeychurch.org
   url: https://dabblingindogmas.com
   album_art: /assets/Logo-iTunes.png
-  category: Religion
-  subcategories:
-    - Skepticism
-    - Critical Thinking
+  category: Religion &amp; Spirituality
+  subcategory: Religion
   explicit: false
+  type: episodic
   description: A podcast where we investigate the belief communities we find around us.
   summary: Dabbling in Dogmas is a podcast where we investigate the belief communities we find around us. We’re not on a spiritual journey, we’re journeying among the spiritual.
   subtitle: Join us as we enjoy the diversity of the human experience
