@@ -3,6 +3,7 @@ layout: null
 info: https://help.apple.com/itc/podcasts_connect/
 ---
 
+{%- assign host = site.hosts | where: 'name', 'Mark Honeychurch' | first-%}
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 	<channel>
@@ -14,14 +15,14 @@ info: https://help.apple.com/itc/podcasts_connect/
 			<itunes:category text="Religion"/>
 		</itunes:category>
 		<itunes:explicit>false</itunes:explicit>
-		<itunes:author>{% for host in site.hosts %}host.name{% unless forloop.last %}, {% endunless %}{% endfor %}</itunes:author>
+		<itunes:author>{% for host in site.hosts %}{{host.name}}{% unless forloop.last %}, {% endunless %}{% endfor %}</itunes:author>
 		<link>{{ '/' | url }}</link>
 		<itunes:owner>
-			<itunes:name>{{ site.hosts.mark.name }}</itunes:name>
-			<itunes:email>{{ site.hosts.mark.email }}</itunes:email>
+			<itunes:name>{{ host.name }}</itunes:name>
+			<itunes:email>{{ host.email }}</itunes:email>
 		</itunes:owner>
 		<itunes:type>episodic</itunes:type>
-		<copyright>Copyright © {{ site.hosts.mark.name }}</copyright>
+		<copyright>Copyright © {{host.name}}</copyright>
 		{% for episode in site.posts %}
 		<item>
 			<title>{{ episode.title }}</title>
@@ -30,7 +31,7 @@ info: https://help.apple.com/itc/podcasts_connect/
 			<description>{{ episode.content | xml_escape | strip_newlines }}</description>
 			{% if episode.length %}<itunes:duration>{{ episode.length | xml_escape }}</itunes:duration>{% endif %}
 			<link>{{ episode.url | absolute_url }}</link>
-			<itunes:image>{% if episode.image %}{{ episode.image | absolute_url }}{% else %}/assets/img/{{ episode.number | absolute_url }}.jpg{% endif %}</itunes:image>
+			<itunes:image>{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{url}}/assets/img/{{episode.number}}.jpg{% endif %}</itunes:image>
 			<itunes:explicit>{% if episode.explicit %}true{% else %}false{% endif %}</itunes:explicit>
 			<itunes:episode>{{ episode.number }}</itunes:episode>
 			<itunes:episodeType>{% if episode.type %}{{ episode.type }}{% else %}full{% endif %}</itunes:episodeType>
