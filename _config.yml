@@ -11,6 +11,7 @@ google:
   analytics: UA-51344487-1
 collections:
   - hosts
+# https://pages.github.com/versions/
 plugins:
   - jekyll-remote-theme
   - jekyll-sitemap
