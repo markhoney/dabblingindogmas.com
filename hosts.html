@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 {% for host in site.hosts %}
 	<h2>{{ host.name }}</h2>
 	<p>{{ host.content | markdownify }}</p>
