@@ -7,11 +7,18 @@ url: https://markhoney.github.io
 permalink: /:title
 remote_theme: jonaharagon/jekyll-bootstrap-theme
 timezone: Pacific/Auckland
+author:
+  name: Mark Honeychurch
+  email: mark@honeychurch.org
 google:
   analytics: UA-51344487-1
 collections:
   - hosts
 # https://pages.github.com/versions/
+bootstrap:
+  header_pages:
+   - index.md
+   - hosts.html
 plugins:
   - jekyll-remote-theme
   - jekyll-sitemap
