@@ -1,5 +1,5 @@
 ---
-episode: 002
+episode: 2
 title: Builders of the Adytum
 date: 2021-10-10
 ---
