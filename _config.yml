@@ -18,9 +18,8 @@ collections:
 bootstrap:
   header_pages:
     - index.md
-    - episodes.html
-    - hosts.html
-    - about.html
+    - episodes.md
+    - about.md
 plugins:
   - jekyll-remote-theme
   - jekyll-sitemap

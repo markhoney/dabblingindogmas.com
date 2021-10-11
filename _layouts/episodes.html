@@ -1,9 +1,9 @@
 ---
-title: Episodes
 layout: default
 ---
 
-<h2>Episodes</h2>
+{{ content }}
+
 <ol class="list-group list-group-numbered">
 	{%- for episode in site.posts reversed -%}
 	{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
