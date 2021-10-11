@@ -20,3 +20,5 @@ podcast:
   description: A topical skeptical podcast from New Zealand.
   summary: Skepticism Today is an hour long monthly skeptical podcast created by Dell Mitchell, Mark Honeychurch, Simon McAuliffe and Tim Atkin.
   subtitle: Skeptical. Critical. Topical.
+
+theme: jekyll-theme-tactile
