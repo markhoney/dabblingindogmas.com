@@ -21,7 +21,7 @@ layout: default
 		{%- if page.list_title -%}
 			<h2 class="post-list-heading">{{ page.list_title }}</h2>
 		{%- endif -%}
-			{%- for episode in posts -%}
+		{%- for episode in posts -%}
 			<div class="card" style="width: 18rem;">
 				<img src="episode.image" class="card-img-top" alt="">
 				<div class="card-body">
@@ -31,8 +31,7 @@ layout: default
 					<a href="#" class="btn btn-primary">Go somewhere</a>
 				</div>
 			</div>
-			{%- endfor -%}
-		{%- endif -%}
+		{%- endfor -%}
 		{% if site.paginate %}
 			<div class="pager">
 				<ul class="pagination">
