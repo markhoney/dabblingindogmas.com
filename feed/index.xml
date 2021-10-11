@@ -24,12 +24,13 @@ info: https://help.apple.com/itc/podcasts_connect/
 		<itunes:type>episodic</itunes:type>
 		<copyright>Copyright © {{host.name}}</copyright>
 		{% for episode in site.posts %}
+		{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.number | first-%}
 		<item>
 			<title>{{ episode.title }}</title>
-			<enclosure url="{% if episode.url %}{{ episode.audio | absolute_url }}{% else %}{{ episode.number | absolute_url }}.jpg{% endif %}" length="{{ episode.size | xml_escape }}" type="audio/mpeg"/>
+			<enclosure url="{{ audio.name | prepend: 'https://archive.org/download/dabbling-in-dogmas/' | absolute_url }}" length="{{ episode.size | xml_escape }}" type="audio/mpeg"/>
 			<pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
 			<description>{{ episode.content | xml_escape | strip_newlines }}</description>
-			{% if episode.length %}<itunes:duration>{{ episode.length | xml_escape }}</itunes:duration>{% endif %}
+			<itunes:duration>{{ audio.length | xml_escape }}</itunes:duration>
 			<link>{{ episode.url | absolute_url }}</link>
 			<itunes:image>{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{url}}/assets/img/{{episode.number}}.jpg{% endif %}</itunes:image>
 			<itunes:explicit>{% if episode.explicit %}true{% else %}false{% endif %}</itunes:explicit>
