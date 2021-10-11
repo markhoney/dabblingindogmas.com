@@ -21,3 +21,9 @@ bundle exec jekyll serve
 ```
 
 The server should then be available at [http://localhost:4000/](http://localhost:4000/).
+
+## Audio File Data
+
+Audio files are uploaded to the Internet Archive, and then a data file must be downloaded and saved to the `_data` directory from the following URL.
+
+[https://archive.org/details/dabbling-in-dogma?output=json](https://archive.org/details/dabbling-in-dogma?output=json)

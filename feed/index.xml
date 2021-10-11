@@ -16,7 +16,7 @@ info: https://help.apple.com/itc/podcasts_connect/
 		</itunes:category>
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:author>{% for host in site.hosts %}{{host.name}}{% unless forloop.last %}, {% endunless %}{% endfor %}</itunes:author>
-		<link>{{ '/' | url }}</link>
+		<link>{{ '/' | absolute_url }}</link>
 		<itunes:owner>
 			<itunes:name>{{ host.name }}</itunes:name>
 			<itunes:email>{{ host.email }}</itunes:email>
