@@ -30,4 +30,4 @@ Audio files should be uploaded to the podcast's [Internet Archive page](https://
 
 ## Styling
 
-The theme used by this website is a [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) theme, so any Bootstrap 5 components can be used.
+The [theme used](https://github.com/jonaharagon/jekyll-bootstrap-theme) by this website is a [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) based theme, so any Bootstrap 5 components or classes can be used.
