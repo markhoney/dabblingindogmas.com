@@ -4,7 +4,7 @@ layout: default
 
 
 {% for host in site.hosts %}
-<div class="card w-50 m-3">
+<div class="card w-50 p-3">
 	<img class="card-img-top" style="width: 100%; max-height: 40vh; object-fit: cover;" alt="" src="{{ host.slug | prepend: '/assets/img/hosts/' | append: '.jpg' | relative_url }}">
 	<div class="card-body">
 		<h3 class="card-title">{{ host.name }}</h3>

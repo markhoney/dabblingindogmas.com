@@ -1,5 +1,5 @@
 ---
-episode: 02
+episode: "02"
 title: Builders of the Adytum
 date: 2021-10-10
 ---
