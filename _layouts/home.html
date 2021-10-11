@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div class="home">
-	{%- if page.title -%}
+	<!--{%- if page.title -%}
 		<h1 class="page-heading py-3">{{ page.title }}</h1>
-	{%- endif -%}
+	{%- endif -%}-->
 
 	{{ content }}
 
@@ -33,7 +33,7 @@ layout: default
 				<a href="{{ episode.url | absolute_url }}" class="btn btn-primary">Listen</a>
 			</div>
 		</div>
-		<h2>Previous Episodes</h2>
+		<h2 class="mt-5 mb-2">Previous Episodes</h2>
 		<div class="container">
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
 				{%- for episode in posts -%}

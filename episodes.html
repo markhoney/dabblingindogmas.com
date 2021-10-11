@@ -1,0 +1,20 @@
+---
+title: Episodes
+layout: default
+---
+
+<h2>Episodes</h2>
+<ol class="list-group list-group-numbered">
+	{%- for episode in site.posts reversed -%}
+	{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
+	<!--{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}-->
+	<li class="list-group-item d-flex justify-content-between align-items-start">
+		<div class="ms-2 me-auto">
+			<div class="fw-bold">{{ episode.title }}</div>
+			{{ episode.excerpt }}
+			<a href="{{ episode.url | relative_url }}" class="btn btn-primary">Listen</a>
+		</div>
+		<span class="badge bg-primary rounded-pill">{{ audio.length | divided_by: 60 | round }} minutes</span>
+	</li>
+	{%- endfor -%}
+</ol>

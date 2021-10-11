@@ -17,8 +17,10 @@ collections:
 # https://pages.github.com/versions/
 bootstrap:
   header_pages:
-   - index.md
-   - hosts.html
+    - index.md
+    - episodes.html
+    - hosts.html
+    - about.html
 plugins:
   - jekyll-remote-theme
   - jekyll-sitemap
