@@ -34,18 +34,22 @@ layout: default
 			</div>
 		</div>
 		<h2>Previous Episodes</h2>
-		{%- for episode in posts -%}
-		{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
-			<div class="card" style="width: 18rem;">
-				<img class="card-img-top img-fluid" alt="" src="{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}">
-				<div class="card-body">
-					<h5 class="card-title">{{ episode.title }}</h5>
-					<h6>{{ episode.date | date_to_long_string }}</h6>
-					<p class="card-text">{{ episode.excerpt }}</p>
-					<a href="{{ episode.url | relative_url }}" class="btn btn-primary">Listen</a>
-				</div>
+		<div class="container">
+			<div class="row row-cols-3 row-cols-sm-1 row-cols-md-2">
+				{%- for episode in posts -%}
+				{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
+					<div class="col card">
+						<img class="card-img-top img-fluid" alt="" src="{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}">
+						<div class="card-body">
+							<h5 class="card-title">{{ episode.title }}</h5>
+							<h6>{{ episode.date | date_to_long_string }}</h6>
+							<p class="card-text">{{ episode.excerpt }}</p>
+							<a href="{{ episode.url | relative_url }}" class="btn btn-primary">Listen</a>
+						</div>
+					</div>
+				{%- endfor -%}
 			</div>
-		{%- endfor -%}
+		</div>
 		{% if site.paginate %}
 			<div class="pager">
 				<ul class="pagination">
