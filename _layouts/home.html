@@ -21,12 +21,22 @@ layout: default
 		{%- if page.list_title -%}
 			<h2 class="post-list-heading">{{ page.list_title }}</h2>
 		{%- endif -%}
+		{% assign post = site.posts.first %}
+		<div class="card">
+			<img src="episode.image" class="card-img-top" alt="">
+			<div class="card-body">
+				<h5 class="card-title">{{ episode.title }}</h5>
+				<h6>{{ episode.date | date_to_long_string }}</h6>
+				<p class="card-text">{{ episode.excerpt }}</p>
+				<a href="{{ episode.url }}" class="btn btn-primary">Listen</a>
+			</div>
+		</div>
 		{%- for episode in posts -%}
 			<div class="card" style="width: 18rem;">
 				<img src="episode.image" class="card-img-top" alt="">
 				<div class="card-body">
 					<h5 class="card-title">{{ episode.title }}</h5>
-					<h6>{{ episode.date | date: date_format }}</h6>
+					<h6>{{ episode.date | date_to_long_string }}</h6>
 					<p class="card-text">{{ episode.excerpt }}</p>
 					<a href="{{ episode.url }}" class="btn btn-primary">Listen</a>
 				</div>
