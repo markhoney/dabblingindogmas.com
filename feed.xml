@@ -1,0 +1,43 @@
+---
+layout: null
+---
+
+<?xml version='1.0' encoding='utf-8'?>
+<rss version='2.0' xmlns:content='http://purl.org/rss/1.0/modules/content/' xmlns:itunes='http://www.itunes.com/dtds/podcast-1.0.dtd'>
+    <channel>
+        <title>{{ site.podcast.title }}</title>
+        <description>{{ site.podcast.description }}</description>
+        <link>{{ '/' | url }}</link>
+        <itunes:author>{{ site.podcast.author }}</itunes:author>
+        <itunes:email>{{ site.podcast.email }}</itunes:email>
+        <itunes:image href='{{ site.podcast.logo | absolute_url }}'/>
+        <language>{{ site.podcast.language }}</language>
+        <copyright>copyright © {{ site.podcast.author }}</copyright>
+        <itunes:owner>
+            <itunes:name>{{ site.podcast.author }}</itunes:name>
+            <itunes:email>{{ site.podcast.email }}</itunes:email>
+        </itunes:owner>
+        <itunes:category text='{{ site.podcast.category }}'>
+            <itunes:category text='{{ site.podcast.subcategory }}'/>
+        </itunes:category>
+        <itunes:type>{{ site.podcast.type }}</itunes:type>
+        <itunes:explicit>{{ site.podcast.explicit }}</itunes:explicit>
+        <itunes:complete>{{ site.podcast.complete }}</itunes:complete>
+        <itunes:block>{{ site.podcast.block }}</itunes:block>
+        {% for episode in site.categories.episode %}
+        <item>
+            <title>{{ episode.title }}</title>
+            <itunes:author>{{ episode.author }}</itunes:author>
+            <itunes:season>1</itunes:season>
+            <itunes:episode>{{ episode.episode }}</itunes:episode>
+            <itunes:episodeType>{{ episode.type }}</itunes:episodeType>
+            <itunes:explicit>{{ episode.explicit }}</itunes:explicit>
+            <link>{{ episode.url | absolute_url }}</link>
+            <pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
+            <itunes:duration>{{ episode.length | xml_escape }}</itunes:duration>
+            <enclosure url='{{ episode.audio | absolute_url }}' length='{{ episode.length | xml_escape }}'/>
+            <description>{{ episode.content | xml_escape | strip_newlines }}</description>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>

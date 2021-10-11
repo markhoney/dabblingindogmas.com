@@ -3,7 +3,7 @@ episode: 001
 title: I Ching
 date: 2021-10-02
 length: 1:00:00
-link: https://archive.org/download/dabbling-in-dogmas/001._I_Ching_-_Dabbling_in_Dogma.mp3
+audio: https://archive.org/download/dabbling-in-dogmas/001._I_Ching_-_Dabbling_in_Dogma.mp3
 type: full
 explicit: false
 layout: episode

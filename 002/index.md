@@ -3,7 +3,7 @@ episode: 002
 title: Builders of the Adytum
 date: 2021-10-10
 length: 1:00:00
-link: https://archive.org/download/dabbling-in-dogmas/002._Builders_of_the_Adytum_-_Dabbling_in_Dogma.mp3
+audio: https://archive.org/download/dabbling-in-dogmas/002._Builders_of_the_Adytum_-_Dabbling_in_Dogma.mp3
 type: full
 explicit: false
 layout: episode
