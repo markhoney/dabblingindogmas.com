@@ -1,6 +1,5 @@
 ---
 name: Alexander Maxwell
-slug: alexander
 email: alexander@dabblingindogmas.com
 web: https://people.wgtn.ac.nz/alexander.maxwell
 ---
