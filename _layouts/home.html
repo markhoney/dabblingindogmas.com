@@ -25,7 +25,9 @@ layout: default
 		{% assign episode = site.posts.first %}
 		{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
 		<div class="card">
-			<img class="card-img-top img-fluid" alt="" src="{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{ episode.episode | prepend: '/assets/img/' | append: '.jpg' | absolute_url }}{% endif %}">
+			<div style="max-height: 6rem">
+				<img class="card-img-top img-fluid" alt="" src="{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{ episode.episode | prepend: '/assets/img/' | append: '.jpg' | absolute_url }}{% endif %}">
+			</div>
 			<div class="card-body">
 				<h5 class="card-title">{{ episode.title }}</h5>
 				<h6>{{ episode.date | date_to_long_string }}</h6>
