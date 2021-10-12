@@ -30,7 +30,7 @@ layout: default
 				<h5 class="card-title">{{ episode.title }}</h5>
 				<h6>{{ episode.date | date_to_long_string }}</h6>
 				<p class="card-text">{{ episode.excerpt }}</p>
-				<a href="{{ episode.url | absolute_url }}" class="btn btn-primary">Listen</a>
+				<a href="{{ episode.url | absolute_url }}" class="btn btn-primary stretched-link">Listen</a>
 			</div>
 		</div>
 		<h2 class="mt-5 mb-2">Previous Episodes</h2>
@@ -44,7 +44,7 @@ layout: default
 							<h5 class="card-title">{{ episode.title }}</h5>
 							<h6>{{ episode.date | date_to_long_string }}</h6>
 							<p class="card-text">{{ episode.excerpt }}</p>
-							<a href="{{ episode.url | relative_url }}" class="btn btn-primary">Listen</a>
+							<a href="{{ episode.url | relative_url }}" class="btn btn-primary stretched-link">Listen</a>
 						</div>
 					</div>
 				{%- endfor -%}
