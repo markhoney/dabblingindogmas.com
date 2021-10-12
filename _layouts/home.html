@@ -38,7 +38,8 @@ layout: default
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
 				{%- for episode in site.posts -%}
 				{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
-					<div class="col card">
+				<div class="col">
+					<div class="card">
 						<img class="card-img-top img-fluid" alt="" src="{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}">
 						<div class="card-body">
 							<h5 class="card-title">{{ episode.title }}</h5>
@@ -47,6 +48,7 @@ layout: default
 							<a href="{{ episode.url | relative_url }}" class="btn btn-primary stretched-link">Listen</a>
 						</div>
 					</div>
+				</div>
 				{%- endfor -%}
 			</div>
 		</div>
