@@ -23,6 +23,6 @@ Back in 2012, Tim and Mark met through their local [Skeptics in the Pub meeting]
 - A Greek Orthodox Service
 - Many, many Evangelical Christian Services
 
-Recently, Tim and Mark have managed to convince fellow Skeptics in the Pub members Bronwyn and Alexander to join them on their adventures, and the four of them decided to start a podcast chronicling their visits. Expect to hear about return visits to all of the above, along with a lot of new stuff we've never done before (as a taster, we're hoping to meet with Hindus, Muslims, Pagans and more in the coming months).
+Recently, Tim and Mark have managed to convince fellow Skeptics in the Pub members Bronwyn and Alexander to join them on their adventures, and the four of them decided to start a podcast chronicling their visits. Expect to hear about return visits to all of the above, along with lots of new stuff we've never done before (as a taster, we're hoping to meet with Hindus, Muslims, Pagans and more in the coming months).
 
 ## Your Hosts
