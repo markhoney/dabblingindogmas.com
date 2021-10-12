@@ -21,7 +21,7 @@ layout: default
 		{%- if page.list_title -%}
 			<h2 class="post-list-heading">{{ page.list_title }}</h2>
 		{%- endif -%}
-		<h2>Latest Episode</h2>
+		<h2>Our Latest Episode</h2>
 		{% assign episode = site.posts.first %}
 		{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
 		<div class="card">
