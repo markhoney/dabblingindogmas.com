@@ -28,6 +28,6 @@ You can subscribe to our podcast on all the major platforms. Either search for "
 
 You can also subscribe to our Podcast directly by using our Podcast feed at:
 
-[https://dabblingindogmas.com/feed/](https://dabblingindogmas.com/feed/)
+[{{ '/feed/' | absolute_url }}]({{ '/feed/' | absolute_url }})
 
-(or alternatively at [https://dabblingindogmas.com/feed.xml](https://dabblingindogmas.com/feed.xml))
+(or alternatively at [{{ '/feed.xml' | absolute_url }}]({{ '/feed.xml' | absolute_url }}))
