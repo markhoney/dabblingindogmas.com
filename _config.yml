@@ -19,7 +19,7 @@ bootstrap:
   header_pages:
     - index.md
     - episodes.md
-    - feed.xml
+    - subscribe.md
     - about.md
 plugins:
   - jekyll-remote-theme
