@@ -36,7 +36,7 @@ layout: default
 		Your browser does not support the audio element.
 	</audio>
 
-	<img alt="" class="img-thumbnail rounded float-end" style="max-height: 40vh" src="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ page.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}">
+	<img alt="" class="img-thumbnail rounded float-lg-end" style="max-height: 40vh" src="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ page.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}">
 
 	<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
