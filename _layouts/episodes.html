@@ -4,7 +4,7 @@ layout: default
 
 {{ content }}
 
-<ol class="list-group list-group-numbered">
+<ol class="list-group list-group-numbered shadow">
 	{%- for episode in site.posts reversed -%}
 	{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
 	<!--{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}-->

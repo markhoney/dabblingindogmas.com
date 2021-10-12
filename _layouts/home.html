@@ -21,7 +21,7 @@ layout: default
 		<h2>Our Latest Episode</h2>
 		{% assign episode = site.posts.first %}
 		{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
-		<div class="card">
+		<div class="card shadow-lg">
 			<img class="card-img-top" style="width: 100%; max-height: 40vh; object-fit: cover;" alt="" src="{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}">
 			<div class="card-body">
 				<h5 class="card-title">{{ episode.title }}</h5>
@@ -36,7 +36,7 @@ layout: default
 				{%- for episode in site.posts offset:1 -%}
 				{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
 				<div class="col">
-					<div class="card">
+					<div class="card shadow">
 						<img class="card-img-top img-fluid" alt="" src="{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}">
 						<div class="card-body">
 							<h5 class="card-title">{{ episode.title }}</h5>

@@ -35,8 +35,9 @@ layout: default
 		<source src="{{ audio.name | prepend: 'https://archive.org/download/dabbling-in-dogmas/' }}" type="audio/mpeg">
 		Your browser does not support the audio element.
 	</audio>
+	<script class="podigee-podcast-player" src="https://cdn.podigee.com/podcast-player/javascripts/podigee-podcast-player.js" data-configuration="{{ audio.name | prepend: 'https://archive.org/download/dabbling-in-dogmas/' | prepend: '{episode: {media: {mp3: ' | append: '} } }'}}"></script>
 
-	<img alt="" class="img-thumbnail rounded float-lg-end" style="max-height: 40vh" src="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ page.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}">
+	<img alt="" class="img-thumbnail rounded float-lg-end shadow" style="max-height: 40vh" src="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ page.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}">
 
 	<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
