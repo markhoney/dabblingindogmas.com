@@ -3,7 +3,7 @@ title: About
 layout: hosts
 ---
 
-## Why is this a Podcast?
+## Why does this Podcast exist?
 
 Back in 2012, Tim and Mark met through their local [Skeptics in the Pub meeting](https://www.meetup.com/Wellington-Skeptics-in-the-Pub) and quickly found they had a shared fascination of all things spiritual, esoteric and conspiratorial. Both had been visiting local churches and meetings, quietly observing how these groups operated. Together, they organised visits to many weird and wonderful events, such as:
 
