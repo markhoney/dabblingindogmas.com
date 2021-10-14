@@ -9,82 +9,19 @@ layout: default
 
 	{{ content }}
 
+	<h2>Our Latest Episode</h2>
+	{% assign episode = site.posts.first %}
+	{%- include episode_card.html -%}
 
-	{% if site.paginate %}
-		{% assign posts = paginator.posts %}
-	{% else %}
-		{% assign posts = site.posts %}
-	{% endif %}
-
-
-	{%- if posts.size > 0 -%}
-		<h2>Our Latest Episode</h2>
-		{% assign episode = site.posts.first %}
-		{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
-		<div
-			class="card shadow-lg overflow-hidden"
-			onMouseOver="this.getElementsByTagName('img')[0].style.transform='scale(1.02)'"
-			onMouseOut="this.getElementsByTagName('img')[0].style.transform='scale(1)'"
-		>
-			<img
-				class="card-img-top w-100"
-				style="max-height: 40vh; object-fit: cover; transition: 0.5s ease-in"
-				alt=""
-				src="{% if episode.image %}{{ episode.image | relative_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | relative_url }}{% endif %}"
-			>
-			<div class="card-body">
-				<h5 class="card-title">{{ episode.title }}</h5>
-				<h6>{{ episode.date | date_to_long_string }}</h6>
-				<p class="card-text">{{ episode.excerpt }}</p>
-				<a href="{{ episode.url | relative_url }}" class="btn btn-primary stretched-link float-end">Listen</a>
-			</div>
-		</div>
-		<h2>Previous Episodes</h2>
-		<div class="container">
-			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-				{%- for episode in site.posts offset:1 -%}
-				{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
+	<h2>Previous Episodes</h2>
+	<div class="container">
+		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+			{%- for episode in site.posts offset:1 limit:6 -%}
 				<div class="col">
-					<div
-						class="card shadow overflow-hidden"
-						onMouseOver="this.getElementsByTagName('img')[0].style.transform='scale(1.02)'"
-						onMouseOut="this.getElementsByTagName('img')[0].style.transform='scale(1)'"
-					>
-						<img
-							class="card-img-top w-100"
-							style="max-height: 40vh; object-fit: cover; transition: 0.5s ease-in"
-							alt=""
-							src="{% if episode.image %}{{ episode.image | relative_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | relative_url }}{% endif %}"
-						>
-						<div class="card-body">
-							<h5 class="card-title">{{ episode.title }}</h5>
-							<h6>{{ episode.date | date_to_long_string }}</h6>
-							<p class="card-text">{{ episode.excerpt }}</p>
-							<a href="{{ episode.url | relative_url }}" class="btn btn-primary stretched-link float-end">Listen</a>
-						</div>
-					</div>
+					{%- include episode_card.html -%}
 				</div>
-				{%- endfor -%}
-			</div>
+			{%- endfor -%}
 		</div>
-		{% if site.paginate %}
-			<div class="pager">
-				<ul class="pagination">
-				{%- if paginator.previous_page %}
-					<li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-				{%- else %}
-					<li><div class="pager-edge">•</div></li>
-				{%- endif %}
-					<li><div class="current-page">{{ paginator.page }}</div></li>
-				{%- if paginator.next_page %}
-					<li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-				{%- else %}
-					<li><div class="pager-edge">•</div></li>
-				{%- endif %}
-				</ul>
-			</div>
-		{%- endif %}
-
-	{%- endif -%}
+	</div>
 
 </div>

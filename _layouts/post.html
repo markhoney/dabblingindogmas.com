@@ -30,12 +30,8 @@ layout: default
 	<div class="post-content e-content" itemprop="articleBody">
 		{{ content }}
 	</div>
-
-	<audio controls>
-		<source src="{{ audio.name | prepend: 'https://archive.org/download/dabbling-in-dogmas/' }}" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>
-	<!--<script class="podigee-podcast-player" src="https://cdn.podigee.com/podcast-player/javascripts/podigee-podcast-player.js" data-configuration="{episode: {media: {mp3: 'https://archive.org/download/dabbling-in-dogmas/{{ audio.name }}'}}}"></script>-->
+	{%- assign url = audio.name | prepend: 'https://archive.org/download/dabbling-in-dogmas/' -%}
+	{%- include audio_player.html url=url -%}
 
 	<img alt="" class="img-thumbnail rounded float-lg-end shadow" style="max-height: 40vh" src="{% if page.image %}{{ page.image | relative_url }}{% else %}{{ page.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | relative_url }}{% endif %}">
 

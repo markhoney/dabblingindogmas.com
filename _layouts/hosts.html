@@ -7,22 +7,7 @@ layout: default
 <div class="container">
 	<div class="row row-cols-1 row-cols-md-2">
 		{% for host in site.hosts %}
-		<div class="col">
-			<div id="{{ host.slug }}" class="card m-2 shadow overflow-hidden">
-				<img
-					class="card-img-top"
-					style="max-height: 40vh; object-fit: cover; filter: grayscale(100%); transition: 0.5s ease-in"
-					onMouseOver="this.style.filter='none'; this.style.transform='scale(1.05)'"
-					onMouseOut="this.style.filter='grayscale(100%)'; this.style.transform='scale(1)'"
-					alt=""
-					src="{{ host.slug | prepend: '/assets/img/hosts/' | append: '.jpg' | relative_url }}"
-				>
-				<div class="card-body">
-					<h3 class="card-title">{{ host.name }}</h3>
-					{{ host.content | markdownify }}
-				</div>
-			</div>
-		</div>
+			{%- include host_card.html -%}
 		{% endfor %}
 	</div>
 </div>
