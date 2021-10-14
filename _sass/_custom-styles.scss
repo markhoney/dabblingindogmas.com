@@ -1,3 +1,7 @@
+body {
+	overflow-x: hidden;
+}
+
 h2 {
 	@extend .mt-5;
 	@extend .mb-4;
