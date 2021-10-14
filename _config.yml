@@ -2,8 +2,8 @@ title: Dabbling in Dogmas
 subtitle: We’re not on a spiritual journey, we’re journeying among the spiritual
 summary: A podcast where we investigate the belief communities we find around us
 description: Dabbling in Dogmas is a podcast where we investigate the belief communities we find around us. We’re not on a spiritual journey, we’re journeying among the spiritual. So join us as we enjoy the diversity of the human experience.
-#url: https://dabblingindogmas.com
-url: https://markhoney.github.io
+url: https://dabblingindogmas.com
+#url: https://markhoney.github.io
 permalink: /:title
 remote_theme: jonaharagon/jekyll-bootstrap-theme
 timezone: Pacific/Auckland
