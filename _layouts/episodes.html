@@ -7,7 +7,7 @@ layout: default
 <ol class="list-group list-group-numbered shadow">
 	{%- for episode in site.posts reversed -%}
 	{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
-	<!--{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}-->
+	<!--{% if episode.image %}{{ episode.image | relative_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | relative_url }}{% endif %}-->
 	<li class="list-group-item d-flex justify-content-between align-items-start">
 		<div class="ms-2 me-auto">
 			<h5>{{ episode.title }}</h5>

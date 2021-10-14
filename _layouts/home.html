@@ -30,13 +30,13 @@ layout: default
 				class="card-img-top w-100"
 				style="max-height: 40vh; object-fit: cover; transition: 0.5s ease-in"
 				alt=""
-				src="{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}"
+				src="{% if episode.image %}{{ episode.image | relative_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | relative_url }}{% endif %}"
 			>
 			<div class="card-body">
 				<h5 class="card-title">{{ episode.title }}</h5>
 				<h6>{{ episode.date | date_to_long_string }}</h6>
 				<p class="card-text">{{ episode.excerpt }}</p>
-				<a href="{{ episode.url | absolute_url }}" class="btn btn-primary stretched-link float-end">Listen</a>
+				<a href="{{ episode.url | relative_url }}" class="btn btn-primary stretched-link float-end">Listen</a>
 			</div>
 		</div>
 		<h2>Previous Episodes</h2>
@@ -54,7 +54,7 @@ layout: default
 							class="card-img-top w-100"
 							style="max-height: 40vh; object-fit: cover; transition: 0.5s ease-in"
 							alt=""
-							src="{% if episode.image %}{{ episode.image | absolute_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | absolute_url }}{% endif %}"
+							src="{% if episode.image %}{{ episode.image | relative_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | relative_url }}{% endif %}"
 						>
 						<div class="card-body">
 							<h5 class="card-title">{{ episode.title }}</h5>

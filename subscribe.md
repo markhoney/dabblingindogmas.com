@@ -28,6 +28,6 @@ You can subscribe to our podcast on all the major platforms. Either search for "
 
 You can also subscribe to our Podcast directly by using our Podcast feed at:
 
-[{{ '/feed/' | absolute_url }}]({{ '/feed/' | absolute_url }})
+[{{ '/feed/' | absolute_url }}]({{ '/feed/' | relative_url }})
 
-(or alternatively at [{{ '/feed.xml' | absolute_url }}]({{ '/feed.xml' | absolute_url }}), if the file needs a `.xml` extension)
+(or alternatively at [{{ '/feed.xml' | absolute_url }}]({{ '/feed.xml' | relative_url }}), if the file needs a `.xml` extension)
