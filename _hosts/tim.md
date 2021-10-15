@@ -1,4 +1,4 @@
 ---
-name: Tim Atkin
+name: Tim
 email: tim@dabblingindogmas.com
 ---

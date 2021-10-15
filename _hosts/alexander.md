@@ -1,5 +1,5 @@
 ---
-name: Alexander Maxwell
+name: Alexander
 email: alexander@dabblingindogmas.com
 ---
 

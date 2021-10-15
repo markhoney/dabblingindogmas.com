@@ -1,4 +1,4 @@
 ---
-name: Bronwyn Rideout
+name: Bronwyn
 email: bronwyn@dabblingindogmas.com
 ---
