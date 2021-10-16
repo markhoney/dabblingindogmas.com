@@ -9,6 +9,7 @@
 		style="max-height: 40vh; object-fit: cover; transition: 0.5s ease-in"
 		alt=""
 		src="{% if episode.image %}{{ episode.image | relative_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | relative_url }}{% endif %}"
+		width="720"
 	>
 	<div class="card-body">
 		<h5 class="card-title">{{ episode.title }}</h5>
