@@ -11,11 +11,11 @@ Back in 2012, [Tim](#tim) and [Mark](#mark) met through their local [Skeptics in
 - An OTO (Ordo Templi Orientis) Gnostic Mass
 - BOTA (Builders of the Adytum) Services
 - A Mormon Church (Church of Jesus Christ of Latter-day Saints) Service
-- Jehovah's Witness Convention and a Memorial Service
+- Jehovah's Witness Conventions and a Memorial Service
 - A David Icke full day Lecture
 - Creationist Talks
 - Faith Healings
-- A Sikh Gurdwara
+- A Sikh Gurudwara
 - A 9/11 Conspiracy Exhibit
 - A Messianic Jewish Service
 - An I Ching Lesson
