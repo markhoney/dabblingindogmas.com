@@ -7,14 +7,16 @@ url: https://dabblingindogmas.com
 permalink: /:title
 remote_theme: jonaharagon/jekyll-bootstrap-theme
 timezone: Pacific/Auckland
+logo: /assets/img/cover.jpg
 author:
   name: Mark Honeychurch
   email: mark@honeychurch.org
 google:
-  analytics: UA-51344487-1
+  analytics: G-D700SKEE5L
 collections:
   - hosts
 # https://pages.github.com/versions/
+archive: dabbling-in-dogmas
 bootstrap:
   header_pages:
     - index.md
