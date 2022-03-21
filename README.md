@@ -26,7 +26,7 @@ The server should then be available at [http://localhost:4000/](http://localhost
 
 Audio files should be uploaded to the podcast's [Internet Archive page](https://archive.org/details/dabbling-in-dogmas), and then a data file must be downloaded and saved to the `_data` directory from the following URL:
 
-[https://archive.org/metadata/dabbling-in-dogma?output=json](https://archive.org/metadata/dabbling-in-dogma?output=json)
+[https://archive.org/metadata/dabbling-in-dogmas?output=json](https://archive.org/metadata/dabbling-in-dogmas?output=json)
 
 ## Styling
 
