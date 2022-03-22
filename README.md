@@ -11,7 +11,7 @@ gem install jekyll bundler
 Install the required Gem files using:
 
 ```sh
-bundle install`
+bundle install
 ```
 
 Then run the server using:
