@@ -34,7 +34,7 @@ The [theme used](https://github.com/jonaharagon/jekyll-bootstrap-theme) by this 
 
 ### Favicon
 
-To add icons, use [Favicon Generator](https://realfavicongenerator.net/) and save the resulting files into a folder called `/assets/img/favaicon`.
+To add icons, use [Favicon Generator](https://realfavicongenerator.net/) and save the resulting files into a folder called `/assets/img/favicon`.
 
 ## Feed
 
