@@ -25,15 +25,15 @@ info: https://help.apple.com/itc/podcasts_connect/
 		<itunes:type>episodic</itunes:type>
 		<copyright>Copyright © {{host.name}}</copyright>
 		{% for episode in site.posts %}
-		{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', episode.episode | first-%}
+		{%- assign audio = site.data[site.archive].files | where: 'track', episode.episode | first-%}
 		<item>
 			<title>{{ episode.title }}</title>
-			<enclosure url="{{ audio.name | prepend: 'https://archive.org/download/dabbling-in-dogmas/' }}" length="{{ audio.size | xml_escape }}" type="audio/mpeg"/>
+			<enclosure url="{{ 'https://archive.org/download/' | append: site.archive | append: '/' | append: audio.name }}" length="{{ audio.size | xml_escape }}" type="audio/mpeg"/>
 			<pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
 			<description>{{ episode.content | xml_escape | strip_newlines }}</description>
 			<itunes:duration>{{ audio.length | xml_escape }}</itunes:duration>
 			<link>{{ episode.url | relative_url }}</link>
-			<itunes:image>{% if episode.image %}{{ episode.image | relative_url }}{% else %}{{ episode.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | relative_url }}{% endif %}</itunes:image>
+			<itunes:image>{% if episode.image %}{{ episode.image | relative_url }}{% else %}{{ '/assets/img/episodes/' | append: episode.episode | append: '.jpg' | relative_url }}{% endif %}</itunes:image>
 			<itunes:explicit>{% if episode.explicit %}true{% else %}false{% endif %}</itunes:explicit>
 			<itunes:episode>{{ episode.episode }}</itunes:episode>
 			<itunes:episodeType>{% if episode.type %}{{ episode.type }}{% else %}full{% endif %}</itunes:episodeType>

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{%- assign audio = site.data.dabbling-in-dogmas.files | where: 'track', page.episode | first-%}
+{%- assign audio = site.data[site.archive].files | where: 'track', page.episode | first-%}
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 	<header class="post-header py-3">
 		<h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
@@ -30,7 +30,7 @@ layout: default
 	<div class="post-content e-content" itemprop="articleBody">
 		{{ content }}
 	</div>
-	{%- assign url = audio.name | prepend: 'https://archive.org/download/dabbling-in-dogmas/' -%}
+	{%- assign url = 'https://archive.org/download/' | append: site.archive | append: '/' | append: audio.name -%}
 	{%- include audio_player.html url=url -%}
 
 	<img alt="" class="img-thumbnail rounded float-lg-end shadow" style="max-height: 40vh" src="{% if page.image %}{{ page.image | relative_url }}{% else %}{{ page.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | relative_url }}{% endif %}">
