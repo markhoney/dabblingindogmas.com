@@ -1,5 +1,5 @@
 ---
-episode: "06"
+episode: 6
 title: Spiritualist Church
 ---
 
