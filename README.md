@@ -39,3 +39,7 @@ To add icons, use [Favicon Generator](https://realfavicongenerator.net/) and sav
 ## Feed
 
 The XML feed for the podcast is created using the [Apple Podcast reference](https://help.apple.com/itc/podcasts_connect/), and is tagged with [Apple's Category System](https://podcasts.apple.com/us/genre/podcasts/id26) as Religion & Spirituality -> Religion.
+
+## Plugins
+
+[https://pages.github.com/versions/](https://pages.github.com/versions/)
