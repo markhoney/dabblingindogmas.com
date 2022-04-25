@@ -23,14 +23,20 @@ layout: default
 				</div>
 			{%- endfor -%}
 		</div>
+		<div class="row">
+			<p class="text-center"><a href="/episodes"  class="btn btn-lg btn-success m-4" role="button">See all our episodes</a></p>
+		</div>
 	</div>
 	<h2>Upcoming Episodes</h2>
+	<div class="row">
+		<p class="text-center">The visits for these episodes have already happened, but either we've not recorded our chat about them yet, or we've not had the time to edit the recording.</p>
+	</div>
 	<div class="container">
 		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
 			{% assign episodes = site.posts | where: "status", "draft" %}
 			{%- for episode in episodes limit:3 -%}
 				<div class="col">
-					{%- include episode_card.html -%}
+					{%- include preview_card.html -%}
 				</div>
 			{%- endfor -%}
 		</div>
