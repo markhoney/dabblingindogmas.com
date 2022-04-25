@@ -10,13 +10,25 @@ layout: default
 	{{ content }}
 
 	<h2>Our Latest Episode</h2>
-	{% assign episode = site.posts.first %}
+	{% assign episode = site.posts | where: "status", "published" | first %}
 	{%- include episode_card.html -%}
 
 	<h2>Previous Episodes</h2>
 	<div class="container">
 		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-			{%- for episode in site.posts offset:1 limit:6 -%}
+			{% assign episodes = site.posts | where: "status", "published" %}
+			{%- for episode in episodes offset:1 limit:6 -%}
+				<div class="col">
+					{%- include episode_card.html -%}
+				</div>
+			{%- endfor -%}
+		</div>
+	</div>
+	<h2>Upcoming Episodes</h2>
+	<div class="container">
+		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+			{% assign episodes = site.posts | where: "status", "draft" %}
+			{%- for episode in episodes limit:3 -%}
 				<div class="col">
 					{%- include episode_card.html -%}
 				</div>
